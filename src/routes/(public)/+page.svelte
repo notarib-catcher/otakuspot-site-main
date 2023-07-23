@@ -6,7 +6,7 @@
 
 </script>
 
-<!--<Banner />-->
+<Banner />
 <div class="w-screen flex flex-col items-center justify-center">
     <div class=" bg-transparent w-[95%] min-h-[100px] mb-10 rounded-sm shadow-2xl p-4 flex flex-col md:flex-row  justify-center items-center flex-wrap">
         <CmcboxYellow /> <CmcboxYellow /> <CmcboxYellow />
