@@ -2,7 +2,7 @@
     import bgimg from "../../assets/bg.webp"
 </script>
 
-<img src={bgimg} class="min-h-screen w-screen object-cover fixed -z-50 brightness-[20%] bgfadein">
+<img src={bgimg} class="min-h-screen w-screen object-cover fixed -z-50 brightness-[20%] bgfadein" alt="background">
 <div class="fadeinafterbg">
     <slot />
 </div>
