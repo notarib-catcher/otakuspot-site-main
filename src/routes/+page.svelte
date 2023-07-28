@@ -16,7 +16,7 @@
     <div class = "absolute top-0 w-screen h-fit z-20 pointer-events-none">
         {#if isUnauth}
             <div class=" backdrop-blur-xl bg-red-700 bg-clip-text text-transparent text-2xl font-semibold h-[50px] w-fit p-2 font-mono rounded-lg mx-auto ModalPopIn backgroundpan">
-                403: UNAUTHORIZED
+                Unauthorized
             </div>
         {/if}
     </div>
