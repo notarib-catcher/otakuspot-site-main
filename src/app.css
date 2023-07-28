@@ -36,3 +36,7 @@ html::-webkit-scrollbar {
 .fontpoppins{
     font-family: 'Poppins', sans-serif;
 }
+
+html{
+    background-color: black;
+}

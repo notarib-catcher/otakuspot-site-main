@@ -14,11 +14,12 @@
     }
 </script>
 
-<div>
-    <div class=" h-screen w-screen bg-transparent overflow-hidden flex flex-col items-center align-middle justify-center">
+<div class="bg-black bg-opacity-0">
+    <img src={bg} class=" bgfadein object-cover min-h-screen min-w-full fixed top-0 left-0 -z-10" style="filter: brightness(20%)">
+    <div class=" fadeinafterbg bg-black bg-opacity-0 h-screen w-screen overflow-hidden flex flex-col items-center align-middle justify-center">
         <div class = "absolute top-0 w-screen h-fit z-20 pointer-events-none">
             {#if isUnauth}
-                <div class=" backdrop-blur-xl bg-red-700 bg-clip-text text-transparent text-2xl font-semibold h-[50px] w-fit p-2 font-mono rounded-lg mx-auto ModalPopIn backgroundpan">
+                <div class=" bg-red-700 bg-clip-text text-transparent text-2xl font-semibold h-[50px] w-fit p-2 font-mono rounded-lg mx-auto ModalPopIn backgroundpan">
                     Unauthorized
                 </div>
             {/if}
@@ -29,7 +30,7 @@
             </button>
         </div>
     </div>
-    <img src={bg} class=" object-cover min-h-screen min-w-full fixed top-0 left-0 -z-10" style="filter: brightness(20%)">
+
 </div>
 
 <style>
@@ -62,6 +63,43 @@
         }
         100%{
             transform: translateY(-55px);
+        }
+    }
+
+    .bgfadein{
+        animation-name: fadeinbg;
+        animation-fill-mode: forwards;
+        animation-duration: 500ms;
+    }
+
+    @keyframes fadeinbg{
+        0%{
+            filter: invert(100%) brightness(40%);
+        }
+
+        100%{
+            filter: invert(0) brightness(20%);
+        }
+    }
+
+    .fadeinafterbg{
+        animation-name: fadeinpostbg;
+        animation-fill-mode: forwards;
+        animation-duration: 1000ms;
+    }
+
+    @keyframes fadeinpostbg{
+        0%{
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        50%{
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 </style>
