@@ -13,3 +13,26 @@ html {
 html::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
+
+.bg-anim{
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: clip;
+    transition: all;
+    transition-duration: 150ms;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+}
+
+.fontpoppins{
+    font-family: 'Poppins', sans-serif;
+}
